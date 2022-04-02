@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {useNavigate} from "react-router-dom";
-import {TailSpin} from "react-loader-spinner";
+import {BtnSpinner} from "../components/loading/BtnSpinner";
 import {addProfile} from "../services/firebase";
 import {getAuth} from "firebase/auth";
 //constants
@@ -73,7 +73,7 @@ const AddProfile = () => {
             onClick={addBtnHandler}
             className={`${isAddBtnLoading && "px-14"} mr-4 my-4 uppercase tracking-widest text-sm bg-netflix-red  cursor-pointer px-4 py-1 rounded-sm disabled:opacity-50`}
           >
-            {isAddBtnLoading? <TailSpin width={20} height={20} color="white"/> : "Continue"}
+            {isAddBtnLoading? <BtnSpinner/> : "Continue"}
           </button>
           <button 
             onClick={()=>navigate(-1)}

@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
-import {TailSpin} from "react-loader-spinner";
 
+import {BtnSpinner} from "../components/loading/BtnSpinner";
 import {ROUTES} from "../constants/routes";
 //services
 import {createUser} from "../services/firebase";
@@ -83,7 +83,7 @@ const Signup = () => {
           >
             <span className={`inline-block mx-auto ${isSubmitLoading && "py-0.5"}`}>
               {(isSubmitLoading?
-                <TailSpin color='white' width={20} height={20}/> : "Sign Up")}
+                <BtnSpinner/> : "Sign Up")}
             </span>
           </button>
           <div className='flex justify-between text-gray-lighter text-sm items-center'>

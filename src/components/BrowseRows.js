@@ -23,7 +23,7 @@ export const BrowseRows = ({genre, list}) => {
                           hover:z-50 `}
             >
               <img 
-                className={`block cursor-pointer `}
+                className={`block cursor-pointer lg:hover:scale-125 lg:transtion lg:duration-200 lg:ease-in-out`}
                 src={`/images/${item.type}/${item.genre}/${item.slug}/small.jpg`} 
                 alt={item.title}/>
               <div className='absolute text-white bottom-0 bg-gray-clear2 w-full'>

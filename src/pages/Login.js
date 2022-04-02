@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom';
 import React, {useState, useEffect} from 'react'
-import {TailSpin} from "react-loader-spinner";
+import {BtnSpinner} from "../components/loading/BtnSpinner";
 //src
 import {GrFacebook} from "react-icons/gr";
 import {ROUTES} from "../constants/routes";
@@ -78,7 +78,7 @@ const Login = () => {
           >
             <span className={`inline-block mx-auto ${isSubmitLoading && "py-0.5"}`}>
               {(isSubmitLoading?
-                <TailSpin color='white' width={20} height={20}/> : "Sign In")}
+                <BtnSpinner /> : "Sign In")}
             </span>
           </button>
           <div className='flex justify-between text-gray-lighter text-sm items-center'>
