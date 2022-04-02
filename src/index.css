@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+input:focus-within ~ label,
+input:not(:placeholder-shown) ~ label {
+  @apply transform scale-75 translate-y-[-12px] lg:translate-y-[-16px]
+}
+
+.sign input:focus-within ~ .sign label,
+.sign input:not(:placeholder-shown) ~ .sign label{
+  @apply transform scale-75 translate-y-[-12px]
+}
